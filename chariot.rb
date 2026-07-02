@@ -5,20 +5,20 @@
 class Chariot < Formula
   desc "Deploy and manage enterprise agent fleets from your terminal"
   homepage "https://app.chariots.sh"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Immortal-Protocols/Chariot-CLI/releases/download/v0.1.0/chariot_0.1.0_darwin_amd64.tar.gz"
-      sha256 "3bd665333aca05045143e9fd9d6df576add594be53a8bb06687d9edffc9eb81d"
+      url "https://github.com/Immortal-Protocols/Chariot-CLI/releases/download/v0.1.1/chariot_0.1.1_darwin_amd64.tar.gz"
+      sha256 "0ea9c6295bffa722e9fbf21970c4f8d82f15db27dd33032d3d86576c153c22d0"
 
       define_method(:install) do
         bin.install "chariot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Immortal-Protocols/Chariot-CLI/releases/download/v0.1.0/chariot_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ff4a6e7b74627239d166050b0f611ce315d8125daf629e83cddeab7b2cc130e3"
+      url "https://github.com/Immortal-Protocols/Chariot-CLI/releases/download/v0.1.1/chariot_0.1.1_darwin_arm64.tar.gz"
+      sha256 "ba1f4414ad06f6644d39f8a99a3902e69c564c254ee89732cb6cbec26486c8af"
 
       define_method(:install) do
         bin.install "chariot"
@@ -28,15 +28,15 @@ class Chariot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Immortal-Protocols/Chariot-CLI/releases/download/v0.1.0/chariot_0.1.0_linux_amd64.tar.gz"
-      sha256 "7d2f0969b2904d5a68c6affae1ed05f065be0a367f425d2ff820f081941368c5"
+      url "https://github.com/Immortal-Protocols/Chariot-CLI/releases/download/v0.1.1/chariot_0.1.1_linux_amd64.tar.gz"
+      sha256 "4691fc901081a5d9e39f05e7e351b7d2333b0200da8872d52098572860c6c796"
       define_method(:install) do
         bin.install "chariot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Immortal-Protocols/Chariot-CLI/releases/download/v0.1.0/chariot_0.1.0_linux_arm64.tar.gz"
-      sha256 "d4241d2f7af6746edafeb5bb36fd281e20f0cc583b9535adfac52bac1d679309"
+      url "https://github.com/Immortal-Protocols/Chariot-CLI/releases/download/v0.1.1/chariot_0.1.1_linux_arm64.tar.gz"
+      sha256 "45ad3c25c7d392d9af1ee2ddd4accbde4ac252bacc09aca389786bd88348560d"
       define_method(:install) do
         bin.install "chariot"
       end
