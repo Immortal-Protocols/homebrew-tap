@@ -5,20 +5,20 @@
 class Chariot < Formula
   desc "Deploy and manage enterprise agent fleets from your terminal"
   homepage "https://app.chariots.sh"
-  version "0.1.16"
+  version "0.1.17"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chariots-sh/Chariot-CLI/releases/download/v0.1.16/chariot_0.1.16_darwin_amd64.tar.gz"
-      sha256 "1bc65928bd87405e4ec6ad76e0f97aca589ef08e5509ea4e582b3eba0240e9ed"
+      url "https://github.com/chariots-sh/Chariot-CLI/releases/download/v0.1.17/chariot_0.1.17_darwin_amd64.tar.gz"
+      sha256 "86e301651d918a1838175312057bec308836c2dd1bc1caa8bcad7fbf4e30347c"
 
       define_method(:install) do
         bin.install "chariot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chariots-sh/Chariot-CLI/releases/download/v0.1.16/chariot_0.1.16_darwin_arm64.tar.gz"
-      sha256 "99a0bfc41c1be1c203bf199f8eaf06a3f8c486185ed045cca9db18445600b060"
+      url "https://github.com/chariots-sh/Chariot-CLI/releases/download/v0.1.17/chariot_0.1.17_darwin_arm64.tar.gz"
+      sha256 "eb046e32adbb65e108a6117bfe42a2caa1f12faffa089d5e7a2423de2f79d950"
 
       define_method(:install) do
         bin.install "chariot"
@@ -28,15 +28,15 @@ class Chariot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chariots-sh/Chariot-CLI/releases/download/v0.1.16/chariot_0.1.16_linux_amd64.tar.gz"
-      sha256 "bd4ca12d53f00880fe448b23cf164848a78fc7202e497158445e37854fd3008f"
+      url "https://github.com/chariots-sh/Chariot-CLI/releases/download/v0.1.17/chariot_0.1.17_linux_amd64.tar.gz"
+      sha256 "775074c3fe3cea7d4ee8b4288453e6dfc35d5a088705a672c96f235fc075c6dc"
       define_method(:install) do
         bin.install "chariot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chariots-sh/Chariot-CLI/releases/download/v0.1.16/chariot_0.1.16_linux_arm64.tar.gz"
-      sha256 "b57be1b4c53ca84763c7b7f5fc6f65fe89149041f1e646593ef4c238c90dba1b"
+      url "https://github.com/chariots-sh/Chariot-CLI/releases/download/v0.1.17/chariot_0.1.17_linux_arm64.tar.gz"
+      sha256 "a557f3fa6a23e43bc1f9b28f6559101a247d229a2d9519297453d48536e4e7d0"
       define_method(:install) do
         bin.install "chariot"
       end
